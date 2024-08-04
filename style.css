@@ -1,26 +1,30 @@
 @import url("https://fonts.googleapis.com/css2?family=Economica&family=Grape+Nuts&family=Roboto:wght@100;300;400;700;900&display=swap");
 
 * {
-  margin: 0%;
+  margin: 0;
   padding: 0;
+  box-sizing: border-box;
   font-family: "Roboto", sans-serif;
+}
+
+body {
+  background-color: #01161E;
+  color: white;
 }
 
 .container {
   width: 100%;
   height: 100vh;
-  background-color:#01161E;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-
 .weather {
-  z-index: 2;
   display: flex;
   align-items: center;
   color: white;
+  text-align: center;
 }
 
 .weather > div {
@@ -32,8 +36,9 @@
 }
 
 .weather p {
-  font-size: 2rem;
+  font-size: 1.5rem;
 }
+
 .weather span {
   font-size: 0.75rem;
 }
@@ -45,39 +50,48 @@
 .weather3 img {
   width: 2rem;
 }
+
 nav {
-  height: 100px;
-  padding: 1rem 0;
+  height: 60px;
+  padding: 0.5rem;
   position: absolute;
-  bottom: 0%;
+  bottom: 0;
   width: 100%;
-  background-color: rgba(180, 177, 177, 0.202);
+  background-color: rgba(180, 177, 177, 0.2);
   display: flex;
   justify-content: center;
   align-items: center;
+  box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.3);
 }
 
 nav form {
-  width: 70%;
-  grid-template-columns: 5fr 1fr;
-  display: grid;
+  width: 90%;
+  max-width: 600px;
+  display: flex;
+  gap: 0.5rem;
 }
 
 .searchField {
-  font-size: 1.1rem;
-  outline: none;
+  font-size: 1rem;
   color: white;
   background-color: transparent;
-  padding: 1rem 0;
-  border: none;
-  border-bottom: 2px solid white;
-  width: 98%;
+  padding: 0.5rem;
+  border: 2px solid white;
+  border-radius: 4px;
+  width: 100%;
 }
 
 nav form button {
-  background-color:#4ECDC4;
-  font-size: 1.1rem;
+  background-color: #4ECDC4;
+  font-size: 1rem;
   color: white;
-  outline: none;
   border: none;
-  cursor: pointer;}
+  border-radius: 4px;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+nav form button:hover {
+  background-color: #36b2a0;
+}
